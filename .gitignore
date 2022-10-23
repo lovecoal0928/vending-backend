@@ -1,6 +1,7 @@
 /venv
 /media
 .env
+memo.md
 __pycache__
 *.pyc
 .DS_Store

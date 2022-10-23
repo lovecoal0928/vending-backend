@@ -44,8 +44,8 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     """カスタムユーザーモデル."""
-    id = models.CharField(default=uuid.uuid4,
-                            primary_key=True, editable=False, max_length=36)
+    id = models.UUIDField(default=uuid.uuid4,
+                            primary_key=True, editable=False)
 
     email = models.EmailField(_('email address'), unique=True)
     username = models.CharField(_('ニックネーム'), max_length=150, blank=True)
